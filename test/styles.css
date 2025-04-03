@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f0f1b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #15151f;
+    padding: 1rem 0;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.auth-buttons .btn {
+    margin-left: 1rem;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+}
+
+.btn.primary:hover {
+    background-color: #155abd;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #1a73e8;
+    color: #1a73e8;
+}
+
+.btn.outline:hover {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.btn.large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.hero {
+    background-image: linear-gradient(135deg, #1e1e2f, #12121b);
+    padding: 4rem 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.hero-img {
+    width: 300px;
+    height: auto;
+}
+
+.market-ticker {
+    background: #111118;
+    padding: 1rem 0;
+    overflow-x: auto;
+}
+
+#ticker {
+    display: flex;
+    gap: 2rem;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.ticker-item {
+    color: #fff;
+}
+
+.ticker-item.up {
+    color: #0f0;
+}
+
+.ticker-item.down {
+    color: #f00;
+}
+
+.features {
+    background-color: #181828;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.features .container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    color: #aaa;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.footer {
+    background: #0a0a12;
+    text-align: center;
+    padding: 2rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.about {
+    background-color: #12121c;
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-lead {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.about-card {
+    background-color: #1a1a2a;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 350px;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: #bbb;
+}
